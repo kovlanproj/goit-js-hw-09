@@ -27,7 +27,7 @@ const options = {
   onClose(selectedDates) {
     const selectedDate = selectedDates[0].getTime();
     const currentDate = Date.now();
-    deltaTime = selectedDate - currentDate;
+    let deltaTime = selectedDate - currentDate;
 
     if (deltaTime <= 0) Notify.failure('Please choose a date in the future');
     else {
